@@ -207,6 +207,11 @@ Project Link: [https://github.com/leycm/label4j](https://github.com/leycm/i18lab
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+<p align="left">
+  <a href="README-TR.md" style="display: inline-block; padding: 0.5rem 0.9rem; border: 1px solid #d1d5db; border-radius: 0.55rem; background-color: #f8fafc; color: #111827; text-decoration: none; font-weight: 700;">TÜRKÇE TR</a>
+</p>
+
 ---
 
 <!-- MARKDOWN LINKS & BADGES -->
