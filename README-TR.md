@@ -13,15 +13,15 @@
   <h1 align="center">i18label4j</h1>
 
   <p align="center">
-    Java i�in esnek kimlikler ve ad alanlar�yla basit ve hafif bir kay�t k�t�phanesi.<br/>
-    Tipli etiketler, dinamik yer tutucular ve tak�labilir serile�tiricilerle uygulaman�z� temiz �ekilde yerelle�tirin.
+    Java için esnek kimlikler ve ad alanlarıyla basit ve hafif bir kayıt kütüphanesi.<br/>
+    Tipli etiketler, dinamik yer tutucular ve takılabilir serileştiricilerle uygulamanızı temiz şekilde yerelleştirin.
     <br />
     <br />
-    <a href="https://github.com/leycm/i18label4j"><strong>Belgeleri inceleyin �</strong></a>
-    &nbsp;�&nbsp;
+    <a href="https://github.com/leycm/i18label4j"><strong>Belgeleri inceleyin »</strong></a>
+    &nbsp;·&nbsp;
     <a href="https://github.com/leycm/i18label4j/issues/new?labels=bug">Hata bildir</a>
-    &nbsp;�&nbsp;
-    <a href="https://github.com/leycm/i18label4j/issues/new?labels=enhancement">�zellik iste�i</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/leycm/i18label4j/issues/new?labels=enhancement">Özellik isteği</a>
   </p>
 </div>
 
@@ -29,63 +29,63 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>��indekiler</summary>
+  <summary>İçindekiler</summary>
   <ol>
-    <li><a href="#proje-hakkinda">Proje Hakk�nda</a></li>
+    <li><a href="#proje-hakkinda">Proje Hakkında</a></li>
     <li>
-      <a href="#baslarken">Ba�larken</a>
+      <a href="#baslarken">Başlarken</a>
       <ul>
-        <li><a href="#on-kosullar">�n Ko�ullar</a></li>
+        <li><a href="#on-kosullar">Ön Koşullar</a></li>
         <li><a href="#kurulum">Kurulum</a></li>
       </ul>
     </li>
-    <li><a href="#kullanim">Kullan�m</a></li>
+    <li><a href="#kullanim">Kullanım</a></li>
     <li><a href="#mimari">Mimari</a></li>
-    <li><a href="#yol-haritasi">Yol Haritas�</a></li>
-    <li><a href="#katkida-bulunma">Katk�da Bulunma</a></li>
+    <li><a href="#yol-haritasi">Yol Haritası</a></li>
+    <li><a href="#katkida-bulunma">Katkıda Bulunma</a></li>
     <li><a href="#lisans">Lisans</a></li>
-    <li><a href="#iletisim">�leti�im</a></li>
-    <li><a href="#tesekkurler">Te�ekk�rler</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
+    <li><a href="#tesekkurler">Teşekkürler</a></li>
   </ol>
 </details>
 
 ---
 
-## Proje Hakk�nda
+## Proje Hakkında
 
-**i18label4j**, yerelle�tirilebilir metin etiketlerini y�netmek i�in mod�ler bir Java k�t�phanesidir ve temiz, ak�c� bir API sunar. Sa�lad�klar�:
+**i18label4j**, yerelleştirilebilir metin etiketlerini yönetmek için modüler bir Java kütüphanesidir ve temiz, akıcı bir API sunar. Sağladıkları:
 
-- **Tipli etiketler**: yerel dile duyarl� i18n etiketleri, k�resel etiketler ve de�i�tirilemez literal etiketleri derleme zaman�nda ay�rt edin.
-- **Yer tutucu ikamesi**: statik veya dinamik `Placeholder` nesnelerini herhangi bir etikete kaydedin ve yap�land�r�labilir `PlaceholderRule` stratejileri arac�l���yla uygulay�n (varsay�lan olarak `${key}`, `{key}`, `%key%`, `<key>` ve daha fazlas�n� destekler).
-- **Tak�labilir serile�tiriciler**: etiketleri herhangi bir hedef t�re (d�z `String`, Adventure `Component` vb.) d�n��t�rmek i�in `LabelSerializer` kaydedin.
-- **Birden fazla yerelle�tirme kayna��**: �evirileri d�z bir dizinden `DeepDirSource` ile y�kleyin (dosya, kaynaklar, http ve daha fazlas�n� destekler) veya kendi `LocalizationSource` uygulaman�z� yaz�n.
-- **Bi�im deste�i**: JSON, YAML, TOML ve Java `.properties` dosyalar� kutudan ��kar ��kmaz desteklenir.
-- **�eviri �nbellekleme**: `CommonLabelProvider`, �evirileri yerel ba��na `ConcurrentHashMap` ile i� par�ac��� g�venli �ekilde �nbelle�e al�r ve a��k �nbellek temizleme sunar.
-- **Geriye d�n�k se�enek**: varsay�lan de�ere veya `!{key}` gibi bir yedek stringe d��me deste�i sunar.
+- **Tipli etiketler**: yerel dile duyarlı i18n etiketleri, küresel etiketler ve değiştirilemez literal etiketleri derleme zamanında ayırt edin.
+- **Yer tutucu ikamesi**: statik veya dinamik `Placeholder` nesnelerini herhangi bir etikete kaydedin ve yapılandırılabilir `PlaceholderRule` stratejileri aracılığıyla uygulayın (varsayılan olarak `${key}`, `{key}`, `%key%`, `<key>` ve daha fazlasını destekler).
+- **Takılabilir serileştiriciler**: etiketleri herhangi bir hedef türe (düz `String`, Adventure `Component` vb.) dönüştürmek için `LabelSerializer` kaydedin.
+- **Birden fazla yerelleştirme kaynağı**: çevirileri düz bir dizinden `DeepDirSource` ile yükleyin (dosya, kaynaklar, http ve daha fazlasını destekler) veya kendi `LocalizationSource` uygulamanızı yazın.
+- **Biçim desteği**: JSON, YAML, TOML ve Java `.properties` dosyaları kutudan çıkar çıkmaz desteklenir.
+- **Çeviri önbellekleme**: `CommonLabelProvider`, çevirileri yerel başına `ConcurrentHashMap` ile iş parçacığı güvenli şekilde önbelleğe alır ve açık önbellek temizleme sunar.
+- **Geriye dönük seçenek**: varsayılan değere veya `!{key}` gibi bir yedek stringe düşme desteği sunar.
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
-### Kullan�lan Teknolojiler
+### Kullanılan Teknolojiler
 
 - [![Java][java-badge]][java-url]
 - [![Gradle][gradle-badge]][gradle-url]
 - [![Lombok][lombok-badge]][lombok-url]
-- [snakeyaml](https://bitbucket.org/snakeyaml/snakeyaml) � [toml4j](https://github.com/moandjiezana/toml4j) � [org.json](https://github.com/stleary/JSON-java)
+- [snakeyaml](https://bitbucket.org/snakeyaml/snakeyaml) · [toml4j](https://github.com/moandjiezana/toml4j) · [org.json](https://github.com/stleary/JSON-java)
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
-## Ba�larken
+## Başlarken
 
-### �n Ko�ullar
+### Ön Koşullar
 
 - Java 21+
 - Gradle 9+ (wrapper dahil)
 
 ### Kurulum
 
-`build.gradle.kts` dosyan�za depo ve ba��ml�l�k ekleyin:
+`build.gradle.kts` dosyanıza depo ve bağımlılık ekleyin:
 
 ```kotlin
 repositories {
@@ -93,10 +93,10 @@ repositories {
 }
 
 dependencies {
-    // Sadece API (aray�ze kar�� derleyin)
+    // Sadece API (arayüze karşı derleyin)
     compileOnly("de.leycm:label4j-api:2.0.0")
 
-    // Tam uygulama (CommonLabelProvider, FileSource, DirSource vb. i�erir)
+    // Tam uygulama (CommonLabelProvider, FileSource, DirSource vb. içerir)
     implementation("de.leycm.label4j-impl:2.0.0")
 }
 ```
@@ -122,13 +122,13 @@ Veya Maven ile (`pom.xml`):
 </dependency>
 ```
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
-## Kullan�m
+## Kullanım
 
-Kullan�m ve nas�l ba�layaca��n�z hakk�nda bilgi i�in
+Kullanım ve nasıl başlayacağınız hakkında bilgi için
 <a href="https://github.com/leycm/i18label4j"><strong>belgeleri inceleyin</strong></a>
 <!-- todo: wiki -->
 
@@ -136,78 +136,78 @@ Kullan�m ve nas�l ba�layaca��n�z hakk�nda bilgi i�in
 
 ```
 i18label4j
-+�� i18-api/          # Public API - Label, LabelProvider, Placeholder, PlaceholderRule, LabelSerializer, LocalizationSource
-L�� i18-impl/         # Implementation - CommonLabelProvider, LiteralLabel, LocaleLabel,
+├── i18-api/          # Public API - Label, LabelProvider, Placeholder, PlaceholderRule, LabelSerializer, LocalizationSource
+└── i18-impl/         # Implementation - CommonLabelProvider, LiteralLabel, LocaleLabel,
                       #                  FileSource, DirSource, FileParser, FileUtils
 ```
 
-K�t�phane iki mod�le ayr�lm��t�r, b�ylece downstream projeler yaln�zca API'ye ba��ml� olabilir ve �al��ma zaman�nda `Instanceable.register(...)` ile uygulamalar� de�i�tirebilir.
+Kütüphane iki modüle ayrılmıştır, böylece downstream projeler yalnızca API'ye bağımlı olabilir ve çalışma zamanında `Instanceable.register(...)` ile uygulamaları değiştirebilir.
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
-
----
-
-## Yol Haritas�
-
-- [x] �ekirdek `Label` API'si ile `LiteralLabel` ve `LocaleLabel`
-- [x] `CommonLabelProvider` ile i� par�ac��� g�venli �eviri �nbelle�i
-- [x] 10'dan fazla yerle�ik yer tutucu stiline sahip `MappingRule`
-- [x] JSON, YAML, TOML, `.properties` deste�i olan `FileSource` ve `DirSource`
-- [x] Classpath (`resource://`), dosya sistemi (`file://`) ve uzak (`http(s)://`) URI �emalar�
-- [x] `DirSource` i�inde i� i�e/hiyerar�ik anahtar deste�i
-- [x] �eviri dosyalar� i�in hot-reload deste�i
-- [ ] Derleme zaman�nda anahtar do�rulamas� i�in Maven / Gradle eklentisi
-- [ ] Ek serile�tirici mod�ller (Adventure, MiniMessage)
-
-Tam �nerilen �zellik listesi ve bilinen hatalar i�in [a��k sorunlar�](https://github.com/leycm/i18label4j/issues) inceleyin.
-
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
-## Katk�da Bulunma
+## Yol Haritası
 
-Katk�lar, a��k kayna�� ��renmek ve in�a etmek i�in harika bir yer haline getirir. Yapt���n�z her katk� **�ok de�erli**dir.
+- [x] Çekirdek `Label` API'si ile `LiteralLabel` ve `LocaleLabel`
+- [x] `CommonLabelProvider` ile iş parçacığı güvenli çeviri önbelleği
+- [x] 10'dan fazla yerleşik yer tutucu stiline sahip `MappingRule`
+- [x] JSON, YAML, TOML, `.properties` desteği olan `FileSource` ve `DirSource`
+- [x] Classpath (`resource://`), dosya sistemi (`file://`) ve uzak (`http(s)://`) URI şemaları
+- [x] `DirSource` içinde iç içe/hiyerarşik anahtar desteği
+- [x] Çeviri dosyaları için hot-reload desteği
+- [ ] Derleme zamanında anahtar doğrulaması için Maven / Gradle eklentisi
+- [ ] Ek serileştirici modüller (Adventure, MiniMessage)
+
+Tam önerilen özellik listesi ve bilinen hatalar için [açık sorunları](https://github.com/leycm/i18label4j/issues) inceleyin.
+
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
+
+---
+
+## Katkıda Bulunma
+
+Katkılar, açık kaynağı öğrenmek ve inşa etmek için harika bir yer haline getirir. Yaptığınız her katkı **çok değerli**dir.
 
 1. Projeyi fork edin
-2. �zellik dal�n�z� olu�turun (`git checkout -b feat/amazing-feature`)
-3. De�i�ikliklerinizi commit edin (`git commit -m 'feat: add some amazing Features'`)
-4. Dal�n�z� push edin (`git push origin feat/amazing-feature`)
-5. Pull Request a��n
+2. Özellik dalınızı oluşturun (`git checkout -b feat/amazing-feature`)
+3. Değişikliklerinizi commit edin (`git commit -m 'feat: add some amazing Features'`)
+4. Dalınızı push edin (`git push origin feat/amazing-feature`)
+5. Pull Request açın
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
 ## Lisans
 
-**GNU Lesser General Public License v3.0** alt�nda da��t�lmaktad�r. Daha fazla bilgi i�in [`LICENSE.LGPL`](LICENSE.LGPL) dosyas�na bak�n.
+**GNU Lesser General Public License v3.0** altında dağıtılmaktadır. Daha fazla bilgi için [`LICENSE.LGPL`](LICENSE.LGPL) dosyasına bakın.
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
-
----
-
-## �leti�im
-
-**Lennard** � leycm@proton.me
-
-Proje Ba�lant�s�: [https://github.com/leycm/label4j](https://github.com/leycm/i18label4j)
-
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
-## Te�ekk�rler
+## İletişim
 
-- [Lombok](https://projectlombok.org/) Java i�in boilerplate azaltma
-- [SnakeYAML](https://bitbucket.org/snakeyaml/snakeyaml) YAML ayr��t�rma
-- [toml4j](https://github.com/moandjiezana/toml4j) TOML ayr��t�rma
-- [org.json](https://github.com/stleary/JSON-java) JSON ayr��t�rma
-- [Adventure API](https://docs.advntr.net/) Minecraft metin bile�eni k�t�phanesi
-- [Best-README-Template](https://github.com/othneildrew/Best-README-Template) README yap�s� ilham�
+**Lennard** — leycm@proton.me
+
+Proje Bağlantısı: [https://github.com/leycm/label4j](https://github.com/leycm/i18label4j)
+
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
+
+---
+
+## Teşekkürler
+
+- [Lombok](https://projectlombok.org/) Java için boilerplate azaltma
+- [SnakeYAML](https://bitbucket.org/snakeyaml/snakeyaml) YAML parsing
+- [toml4j](https://github.com/moandjiezana/toml4j) TOML parsing
+- [org.json](https://github.com/stleary/JSON-java) JSON parsing
+- [Adventure API](https://docs.advntr.net/) Minecraft metin bileşeni kütüphanesi
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template) README yapısı ilhamı
 - [Shields.io](https://shields.io) daha iyi readme'ler
 
-<p align="right">(<a href="#readme-top">ba�a d�n</a>)</p>
+<p align="right">(<a href="#readme-top">başa dön</a>)</p>
 
 ---
 
